@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} - {{food.name}} {% endblock title %}
+
+{% block content %}
+<!-- breadcrumb start-->
+   <section class="breadcrumb breadcrumb_bg">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="breadcrumb_iner text-center">
+                  <div class="breadcrumb_iner_item">
+                     <h2>{{food.name}}</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- breadcrumb start-->
+   <!--================Blog Area =================-->
+   <section class="blog_area single-post-area section_padding">
+      <div class="container">
+         <div class="row">
+               <div class="single-post" style='display: flex;'>
+                  <div class="feature-img" style='margin-right:50px;'>
+                     <img class="img-fluid" src="{{food.pic.url}}" alt="">
+                  </div>
+                  <div class="blog_details">
+                     <h1>
+                        {{food.name}}
+                     </h1>
+                     <ul class="blog-info-link mt-3 mb-4">
+                        <li><a href="#"><i class="fas fa-book"></i> {{food.category}}</a></li>
+                        <li><a href="#"><i class="	fas fa-money-bill"></i>{{food.price}} $</a></li>
+                     </ul>
+                     <p class="excert">
+                       {{food.about}}
+                     </p>
+                  </div>
+               </div>
+         </div>
+      </div>
+   </section>
+   {% endblock content %}
